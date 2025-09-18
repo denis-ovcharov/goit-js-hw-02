@@ -1,25 +1,25 @@
 function getShippingCost(country) {
-    const prices = {
-        China: 100,
-        Chile: 250,
-        Australia: 170,
-        Jamaica: 120,
-    };
-
-    const price = prices[country];
+    let price;
 
     switch (country) {
         case "China":
-        case "Chile":    
+            price = 100;
+            break;
+        case "Chile":
+            price = 250;
+            break;
         case "Australia":
+            price = 170;
+            break;
         case "Jamaica":
-            return `Shipping to ${country} will cost ${price} credits`;
+            price = 120;
+            break;
         default:
             return "Sorry, there is no delivery to your country";
     }
+
+    return `Shipping to ${country} will cost ${price} credits`;
 }
-
-
 
 
 
